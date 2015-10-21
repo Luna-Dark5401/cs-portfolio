@@ -3,57 +3,92 @@
     <head>
         <title> Paola's Website</title>
     </head>
-    <link rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="navbar.css" />
     <body>
         <style>
             h1 {
-                color : Purple;
-                font-family : acme;
+                color :rgb(36,0,36);
+                font-family :sans-serif;
                 text-align:center;
+                background-color:white;
+                margin-top:100px;
+                margin-bottom:100px;
+                margin-right:15px;
+                margin-left:15px;
             }
             body {
-                background-image: url(https://s-media-cache-ak0.pinimg.com/736x/5a/f3/5b/5af35b89a453094614ecee7f7650a41a.jpg);
-            }
-            
+                background-image: url(https://s-media-cache-ak0.pinimg.com/736x/ef/12/39/ef1239c699a298eed953e4ef5ba05d7a.jpg);
             }
             #intro{
                 text-align:center;
-                size: 3em;
+                font-size:24px;
             }
-            #navbar{
-                text-align:center;
-            }
-            #navbar li{
-                display:inline-block;
-                border: 2px solid black;
-            }
-            #About {
+            .About {
                 text-indent :2em;
+                text-align:center;
+                font-size:24px;
             }
+            #melike {
+                text-align:center;
+                font-size:20px;
+            }
+            .points {
+                text-align:center;
+               font-size:24px;
+               background-color:rgb(188,156,196);
+            }
+            
         </style>
-        
-    <ul id="navbar">
+   
+    <div id="top">
+        <ul id="navbar">
         <li><a href="index.html">Home</a></li>
         <li><a href="Hardware.html">Hardware</a></li>
-    </ul>
-    <h1><img src="http://www.hpc.org.jo/hpc/images/star27.gif" width="36">WELCOME!<br>
-    <img src="http://www.hpc.org.jo/hpc/images/star27.gif" width="36">
-    <img src="http://www.cinemablend.com/images/news/68392/_1416938326.gif" width="360"><br></h1>
+        </ul>
+    </div>
+    <div><h1><img src="http://www.hpc.org.jo/hpc/images/star27.gif" width="36">WELCOME!
+    <img src="http://www.hpc.org.jo/hpc/images/star27.gif" width="36"><br>
+    <img src="http://www.cinemablend.com/images/news/68392/_1416938326.gif" width="450"><br></h1></div>
     <p id="intro">I am a 9th grader at Summit Shasta High School.I have no knowledge of code or computer science at all.
     I am new at the entire thing and let me tell you that this is an amazing experience that I have had so far.
     Computer Science is an amazing talent to have and it is actually fun despite needing to write a lot. 
     So let me give you some of the points in my website:<br>
-    <ul>
-        <li>You will know HTML and CSS after you read my website.</li>
-        <li>You will know about the computer hardware like the back of your hand,not really but get what I'm saying. </li>
-        <li>You will learn about myself and my story.</li>
+    <ul class="points"><div>
+        You will know about the computer hardware like the back of your hand,not really but get what I'm saying.<br>
+        You will learn about myself and my story.</div>
     </ul>
     </p>
-    <h2>About Me</h2>
-    <p id="About">
+    <h2 class="About">About Me</h2>
+    <p class="About">
         So let's start with my name.My name is Paolandrea (Paula-Andrea) Guerrero.I am 14 years old.
         Unfortunely I am the middle child of two brothers.My big brother is a senior in high school and my little brother is in second grade.
-        I am a mix of Colombian, Salvadorian,And Mexican.I speak Spanish and 
+        I am a mix of Colombian, Salvadorian,And Mexican.I speak Spanish and I know a little japanese since I watch anime.<br>
+        <ul id="melike"><strong>Hobbies and Interest:</strong><br>
+            Art
+            <div id="art"><img src="https://s-media-cache-ak0.pinimg.com/originals/dd/4e/9e/dd4e9e9c0206e6e41aa9e43afea0a76f.jpg" 
+            width="340" height="200"></div>
+            TV
+            <div id="tele"><img src="http://www.satellitestreams.com/images/tv%20shows.jpg" width="340" height="200">
+            </div>
+            Anime
+            <div id="anime" >
+                <img src="http://www.inihdwallpaper.com/wp-content/uploads/2015/05/anime-wallpaper-album.png" width="340" height="200" >
+            </div>
+            Manga
+            <div id="manga">
+                <img src="http://www.yalsa.ala.org/thehub/wp-content/uploads/2010/12/manga.jpg" width="340" height="200">
+            </div>
+            Music
+            <div id="headphones">
+                <img src="http://img01.deviantart.net/d109/i/2008/166/e/0/tricia_headphones__vector_by_crissey.jpg" width="340" height="200">
+            </div>
+            Reading
+            <div id="book">
+                <img src="http://www.mikelavere.com/wp-content/uploads/2015/03/self-improvement-books.jpg" width="340" height="200">
+            </div>
+            
+        </ul>
+        
         
     </p>
     </body>

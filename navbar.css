@@ -1,23 +1,25 @@
 #navbar{
     text-align:center;
     
-}
+    }
 #navbar li{
-    display:inline-block;
-    border:2px solid black;
-}
+        display:inline;
+        padding:15px;
+        background-color:white;
+        font-size:30px;
+        transform:rotateZ(0deg);
+        transition: .3s ease;
+    }
 #navbar a{
  
     
+    }
+#navbar li:hover{
+    transform:rotateZ(280deg);
+    background-color :rgb( 153,153,255);
+    
 }
-
-
-
-
-
-
-
-
-
-
-
+#top {
+    background-color: rgb(37,37,60);
+    
+}
