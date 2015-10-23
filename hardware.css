@@ -1,0 +1,20 @@
+body {
+    background-image: url(https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRVV0UBGJbjW2EHs_JLoM6woOoTzWkXTwGcvHs_4UHuvYGsCJim);
+    font-family:serif;
+    font-size:22px;
+    text-align:center;
+}
+#top {
+    background-color: rgb(37,37,60);
+                
+}
+body{
+    color:white;
+}
+#tb-images{
+    border:black;
+}
+.question{
+    font-size:36px;
+    background-color:rgb(0,0,66);
+}

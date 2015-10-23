@@ -1,0 +1,98 @@
+h1 {
+    color :rgb(36,0,36);
+    font-family :sans-serif;
+    text-align:center;
+    background-color:white;
+    margin-right:280px;
+    margin-left:280px;
+}
+body {
+    background-image: url(http://pxwallpaper.com/wp-content/uploads/2013/12/pale-blue-background-tumblr-659-315x200.png);
+}
+#intro{
+    text-align:center;
+    font-size:24px;
+}
+.About {
+    text-indent :2em;
+    text-align:center;
+    font-size:24px;
+}
+#melike {
+    text-align:center;
+    font-size:26px;
+}
+.points {
+    font-size:24px;
+    background-color:rgb(175,138,175);
+    margin-right:400px;
+    margin-left:400px;
+}
+#art{
+    font-size:18px;
+    background-color: rgb(92,184,230);
+    width: 350px;
+    padding: 30px;
+    border: 25px solid navy;
+    margin: 30px;
+    position:static;
+    float:left;
+}
+#tele {
+    font-size:18px;
+    color:white;
+    background-color:rgb(107,36,71);
+    width: 350px;
+    padding: 40px;
+    border: 25px solid pink;
+    margin: 30px;
+    position:static;  
+    float:right;
+                
+}
+#anime{
+    font-size:18px;
+    color:white;
+    background-color:rgb(104,0,0);
+    width: 350px;
+    padding: 40px;
+    border: 25px solid red;
+    margin: 30px;
+    position:static;
+    float:left;
+}
+#manga{
+    font-size:18px;
+    color:black;
+    background-color:rgb(255,255,102);
+    width: 350px;
+    padding: 40px;
+    border: 25px solid yellow;
+    margin: 30px;
+    position:static;
+    float:right;
+}
+#headphones {
+    font-size:18px;
+    color:white;
+    background-color:rgb(43,0,58);
+    width: 350px;
+    padding: 40px;
+    border: 25px solid purple;
+    margin: 30px;
+    position:static;
+    float:left;
+}
+#book {
+    font-size:18px;
+    background-color:rgb(153,255,204);
+    width:350px;
+    padding:40px;
+    border:25px solid green;
+    margin:30px;
+    position:static;
+    float:right;
+}
+#More{
+    font-size:22px;
+}
