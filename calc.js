@@ -29,8 +29,8 @@ function doMath() {
         answer = Math.pow(input1.value, input2.value);
         display.innerHTML = answer;
     }
-    if (dropdown.value == "npow"){
-        answer = Math.pow(input1.value,1/root)
+    if (dropdown.value == "nroot"){
+        answer = Math.pow(input1.value, 1 / input2.value);
         display.innerHTML = answer;
     }
 }

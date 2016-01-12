@@ -1,0 +1,21 @@
+.Items {
+    display:inline-block;
+}
+
+body {
+    background-image: url(https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS7wEn_q84qzjaJ0Z1iL0-Zi7J-Lqh7qvfkSqwqvGIzkKoCUPCz);
+}
+
+.Info {
+    font-size:24px;
+    text-align:center;
+}
+
+p {
+    text-align:center;
+    font-size:28px;
+}
+h1{
+    text-align:center;
+    font-size:45px;
+}
