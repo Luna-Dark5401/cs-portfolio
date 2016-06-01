@@ -10,12 +10,9 @@
         transform:rotateZ(0deg);
         transition: .3s ease;
     }
-#navbar a{
- 
-    
-    }
+
 #navbar li:hover{
-    transform:rotateZ(280deg);
+    transform:rotateZ(360deg);
     background-color :rgb( 153,153,255);
     
 }
