@@ -11,7 +11,7 @@
     
 }
 body{
-    background-image:url(https://www.jisc.ac.uk/sites/default/files/styles/710px-wide/public/data-visual-inform2.jpg?itok=QdjwOHNY);
+    background-image:url(http://www.sadmuffin.net/cherrybam/myspacelayouts/colorful/169.jpg);
 }
 #supply{
     background-color:rgb(179,0,89);
@@ -85,5 +85,13 @@ h1{
 }
 /*This is for the hair/mouth page so the proportion won't be uneven and that it looks presentable*/
 #hair-steps{
-    
+    text-align:center;
+}
+/*Mouth part alignment because its a bit better when it is more in the center because it is the topic that will be discussed next*/
+#mouth-steps{
+    text-align:center;
+}
+/*Css for the nose page*/
+#nose-steps{
+    text-align:center;
 }
