@@ -2,7 +2,7 @@
 <html>
     <head>
         
-        <title>WHEEL OF FORTUNE</title>
+        <title>Guess</title>
         <link rel="stylesheet" type="text/css" href="navbar.css"/>
         <link rel="stylesheet" href="Wheel.css" type="text/css" />
         
@@ -16,13 +16,62 @@
         <li><a href="calc.html">Calculator</a></li>
         <li><a href="infosite.html">Interest</a></li>
         <li><a href="Bot.html">Bot Game</a></li>
-        <li><a href="Wheel.html">Fortune</a></li>
+        <li><a href="Wheel.html">Guess</a></li>
         <li><a href="random.html">Drawing</a></li>
         </ul>
     </div>
     
     <body>
+    <h1>Guessing Game</h1>
     
+<P><A hr
+<p><script LANGUAGE="JavaScript">
+
+<!--- Use HTML comment tag to prevent Javascript from being displayed.
+
+document.write("Welcome to the guessing game. I'll pick a number<BR>");
+document.write("between 1 and 50 and you try to guess what it is.<BR>");
+document.write("You get 7 tries. GO! GO! GO!<BR>");
+
+// Generate a random number between 1 and 50.
+number = Math.round((Math.random() *50))%50  + 1;
+
+
+// Do this loop for each guess. Leave the loop when the guess is
+// correct or when 7 incorrect guesses have been made.
+
+counter = 0;
+do
+	{
+	counter++;
+
+	guess = prompt("What's your guess?");
+	document.write("Guess #"+counter+" was "+guess+"<BR>");
+
+	if (guess == number) {
+		document.write("You guessed it!<BR>");
+		}
+	else  {
+		if (guess < number)  {
+			document.write("guess again.<BR>");
+			}
+		else  {
+			document.write("guess again.<BR>");
+			}
+		}
+
+		
+	} while (counter <7 && guess != number);
+
+if (guess != number) {
+		document.write("There goes your 7 tries which means I win! The number was " + number+".<BR>");
+		}
+
+
+
+</script> </p>
+</body>
+</html>
 <script type="text/javascript" src="Wheel.js"></script>
     </body>
 </html>

@@ -3,7 +3,10 @@ body{
 }
 h1{
     color:white;
+    font-size:36px;
+    text-align:center;
 }
 body{
-    background-image: url('http://designreflect.com/wp-content/uploads/2012/09/wooden-textures/Vintage-Grunge-Wood-Background.jpg');
+    font-weight:bold;
+    font-size:26px;
 }
