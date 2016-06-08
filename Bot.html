@@ -14,7 +14,7 @@
         <li><a href="infosite.html">Interest</a></li>
         <li><a href="Bot.html">Bot Game</a></li>
         <li><a href="Wheel.html">Fortune</a></li>
-        <li><a href="model.html">Drawing</a></li>
+        <li><a href="random.html">Drawing</a></li>
         </ul>
     </div>
  
@@ -23,7 +23,140 @@
     <h2>What is Vindinium?</h2>
     <p>
         Vindinium is a website that usually uses the practices of javascript.The website is created so then you create a bot and put any javascript to make 
-        it play and move around the areana of the game.
+        it play and move around the areana of the game.<br>Vindinium is played by having an AI coding content so the bot you have entered inside will be
+        following the orders you have given it.The once you believe that the code or oders you have written down for your bot then to win the game you must 
+        be able to collect the most gold than the other bots inside the game.
+        This game is continuous and can be played over and over again.
+    </p>
+    <h2>The coding for the Bot</h2>
+    <pre>
+        <code id="code">
+            var Bot = require('bot');
+var PF = require('pathfinding');
+var bot = new Bot('k2qevaoi', 'training', 'http://vindinium.org'); //Put your bot's code here and change training to Arena when you want to fight others.
+// var bot = new Bot('c6nbo926', 'arena', 'http://52.53.211.7:9000'); //Put your bot's code here and change training to Arena when you want to fight others.
+var goDir;
+var Promise = require('bluebird');
+Bot.prototype.botBrain = function() {
+    return new Promise(function(resolve, reject) {
+        _this = bot;
+        //////* Write your bot below Here *//////
+        //////* Set `myDir` in the direction you want to go and then bot.goDir is set to myDir at the bottom *////////
+/*                                      *
+         * This Code is global data!            *
+         *                                      */
+
+        // Set myDir to what you want and it will set bot.goDir to that direction at the end.  Unless it is "none"
+        var myDir;
+        var myPos = [bot.yourBot.pos.x, bot.yourBot.pos.y];
+
+        var enemyBots = [];
+        if(bot.yourBot.id != 1) enemyBots.push(bot.bot1);
+        if(bot.yourBot.id != 2) enemyBots.push(bot.bot2);
+        if(bot.yourBot.id != 3) enemyBots.push(bot.bot3);
+        if(bot.yourBot.id != 4) enemyBots.push(bot.bot4);
+
+        //finds the closest enemy
+        var enemytoattack = enemyBots[0]
+        for(i = 0; i < enemyBots.length ; i++){
+            if(bot.findDistance(myPos, [enemytoattack.pos.x, enemytoattack.pos.y]) > bot.findDistance(myPos, [enemyBots[i].pos.x, enemyBots[i].pos.y]) ){
+            closestBot = enemyBots[i];
+            }
+        }
+
+        /*                                      *
+         * This Code Decides WHAT to do         *
+         *                                      */
+        var task;
+        
+        
+        
+        if (bot.yourBot.life < 45) {
+            task = "taverns";
+        } 
+        else if(bot.yourBot.life > enemytoattack.life) {
+            task = "attack";
+        }
+        
+        else {
+            task = "freemines"
+        }//if the life is less than 45 then the bot will go to the tavern
+        
+        
+        
+
+        /*                                      *
+         * This Code Determines HOW to do it    *
+         *                                      */
+
+        // This Code find the nearest freemine and sets myDir toward that direction //
+        if(task === "freemines") {
+            var closestMine = bot.freeMines[0];
+            for(i = 0; i < bot.freeMines.length; i++) {
+                if(bot.findDistance(myPos, closestMine) > bot.findDistance(myPos, bot.freeMines[i])) {
+                    closestMine = bot.freeMines[i];
+                }
+            }
+            console.log("Claiming a Free Mine!");
+            myDir = bot.findPath(myPos, closestMine);
+        }
+        
+        if (task === "taverns") {
+            var closestTavern = bot.taverns[0];
+            for(i = 0; i < bot.taverns.length; i++){
+                if(bot.findDistance(myPos, closestTavern) > bot.findDistance(myPos, bot.taverns[i])) {
+                    closestTavern = bot.taverns[i];
+                }
+            }
+            console.log("Need more life");
+            myDir = bot.findPath(myPos, closestTavern);
+        }
+
+         if(task === "attack") {
+            console.log("Attacking nearest Bot!")
+            myDir = bot.findPath(myPos, [enemytoattack.pos.x, enemytoattack.pos.y])
+        }
+
+        /*                                                                                                                              *
+         * This Code Sets your direction based on myDir.  If you are trying to go to a place that you can't reach, you move randomly.   *
+         * Otherwise you move in the direction set by your code.  Feel free to change this code if you want.                            */
+        if(myDir === "none") {
+            console.log("Going Random!");
+            var rand = Math.floor(Math.random() * 4);
+            var dirs = ["north","east"];
+            bot.goDir = dirs[rand];
+        } else {
+            bot.goDir = myDir;
+        }
+        
+       
+
+
+        ///////////* DON'T REMOVE ANTYTHING BELOW THIS LINE *//////////////
+        resolve();
+    });
+}
+bot.runGame();
+        </code>
+    </pre>
+    <h2>What the code above mean:</h2>
+    <p>
+        The code above may be a bit confusing at the fist look but it actually is a bit simple once it is broken down into parts.The code above is just the actions
+        that I wish my bot will be taking.The begining of the code is really simple actually.It is just the variables that will be use when the bot comes
+        to <strong>LIFE</strong>.The line that states THIS IS GLOBAL DATA is where we actually create the function for the bot to take action on the
+        Vindinium page.The variable "var enemyBots" is to help my bot to attack the other bot on the page and the code "var enemyattack = enemyBots"
+        finds the nearest enemy near me and will attack the enemy and the result depends on both of our codes.There is another aspect of the code, there has to be 
+        if/elses statements because there might be a problem if you are engaged with an enemy and you are losing life point so then you can command your
+        bot to do another action if that would happen and the bot will avoid enemies,if it can, to restore on Hp.
+        In the last set of the coding it is basically just ordering the bot to move around freely if a particular destination is out of reach.After most
+        of the coding,it is a code to complete all of our functions and transfer it to the vindinium bot that I have,which would then make it follow the 
+        code that is written down.
+        </p>
+    <h2>What was learned</h2>
+    <p>
+        I learned a lot actually in this project.I had leaerned about javascript in general and learned that it holds information in every click or page.
+        I had also learned that certain codes can create action that things like a bot will follow.There was also a complication in learning the code pieces
+        but I was able to learn most of it and it was quite an interesting piece to the coding experience.
     </p>
     </body>
 </html>

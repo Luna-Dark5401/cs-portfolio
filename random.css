@@ -1,0 +1,89 @@
+/*Simple css,making the front page pretty and presentable to the audiences*/
+#Basic{
+    font-size:36px;
+    text-align:center;
+    font-family:serif;
+}
+/*Remeber that class is identified with a period(.) and an id with and hashtag (#)*/
+.list{
+    font-size:26px;
+    text-align:center;
+    
+}
+body{
+    background-image:url(https://www.jisc.ac.uk/sites/default/files/styles/710px-wide/public/data-visual-inform2.jpg?itok=QdjwOHNY);
+}
+#supply{
+    background-color:rgb(179,0,89);
+    color:white;
+}
+/*This will affect all of the H1 from the three html pages*/
+h1{
+    font-size:68px;
+    text-align:center;
+}
+#click{
+    font-size:22px;
+    text-align:center;
+    color:white;
+    background-color:black;
+}
+/* Focusing on the Dropdown Button */
+.dropbutton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 26px;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:rgb(128,191,255);
+    min-width: 160px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color:green;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbutton {
+    background-color: #3e8e41;
+}
+/*end of button css or details on to the next part*/
+/*This is theh css for the drawing of the eye*/
+#eyes-steps{
+    text-align:center;
+}
+/*This is a class so that all of the steps have the same structure as each other*/
+.step{
+    text-align:center;
+    font-size:26px;
+    
+}
+/*This is for the hair/mouth page so the proportion won't be uneven and that it looks presentable*/
+#hair-steps{
+    
+}
